@@ -359,6 +359,18 @@ $('.display_post').click(function(e) {
 	$('#post_content' + postId).show();
 	$('#profile' + postId).show();
 	$('#post_hidden' + postId).hide();
+
+});
+
+/**
+ * Display hidden post on post review page
+ */
+$('.display_post_review').on('click', function(e) {
+	e.preventDefault();
+
+	let $displayPostLink = $(this);
+	$displayPostLink.closest('.post-ignore').removeClass('post-ignore');
+	$displayPostLink.hide();	
 });
 
 /**
